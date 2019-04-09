@@ -1,6 +1,7 @@
 package entity;
 
 public class Cliente {
+	//Aca se linkean las cosas con Scene Builder 
 	private String nombre;
 	private String apellido;
 	private String direccion;
