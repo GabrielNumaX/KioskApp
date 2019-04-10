@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name="cliente")
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -66,15 +66,11 @@ public class Cliente {
 	}
 	
 	//Crud Cliente
-	public void guardarCliente(Cliente cliente) throws Exception{
-		try {
-			conexion.openCurrentSessionwithTransaction();
-			conexion.getCurrentSession().save(cliente);
-			conexion.closeCurrentSessionwithTransaction();
-		}catch(Exception e){
-			System.out.println("El error es: "+e);
-			
-		}
+	public void guardarCliente(Cliente cliente) {
+		conexion.openCurrentSession();
+		conexion.getCurrentSession().save(cliente);
+		conexion.closeCurrentSessionwithTransaction();
+		
 	}
 	
 	

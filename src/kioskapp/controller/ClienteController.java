@@ -47,7 +47,7 @@ public class ClienteController implements Initializable{
 		try {
 			cliente.guardarCliente(cliente);			
 		}catch(Exception e) {
-			System.out.println("El error es: "+e);
+			e.printStackTrace();
 		}
 		
 		//Esto de aca abajo es para ver si anda nada mas!

@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
 import org.reflections.Reflections;
 
 public class ConexionBDD {
@@ -40,13 +41,23 @@ public class ConexionBDD {
 		currentTransaction.commit();
 		currentSession.close();
 	}
-
-	private static SessionFactory getSessionFactory() {
+	
+	private static SessionFactory getSessionFactory(){
+		Configuration configuration = new Configuration();
+		configuration.configure("kioskapp/view/hibernate.cfg.xml");
+		registry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();;
+		sessionFactory = configuration.buildSessionFactory(registry);
+		System.out.println(sessionFactory);
+		return sessionFactory;
+		
+	}
+	
+	/*private static SessionFactory getSessionFactory() {
 		if (sessionFactory == null) {
 			try {
-				Configuration configuration = new Configuration()
-					.configure("view/hibernate.cfg.xml");
-				Reflections reflections = new Reflections("/model");
+				Configuration configuration = new Configuration();
+					configuration.configure("hibernate.cfg.xml");
+				/*Reflections reflections = new Reflections("kioskapp.model");
 				Set<Class<?>> classes = reflections.getTypesAnnotatedWith(javax.persistence.Entity.class);
 				for(Class<?> clazz : classes){
 				    configuration.addAnnotatedClass(clazz);
@@ -65,7 +76,7 @@ public class ConexionBDD {
 			}
 		}
 		return sessionFactory;
-	}
+	}*/
 
 	public Session getCurrentSession() {
 		openCurrentSession();
