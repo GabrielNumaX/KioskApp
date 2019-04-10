@@ -3,6 +3,19 @@
   <groupId>KioskApp</groupId>
   <artifactId>KioskApp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <name>KiosKApp</name>
+  <dependencies>
+  	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>5.3.1.Final</version>
+	</dependency>
+	<dependency>
+  		<groupId>org.reflections</groupId>
+  		<artifactId>reflections</artifactId>
+  		<version>0.9.11</version>
+  	</dependency>
+  </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>

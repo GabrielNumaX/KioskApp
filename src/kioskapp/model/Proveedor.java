@@ -1,6 +1,11 @@
 package kioskapp.model;
 
-public class Proveedor {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table
+public class Proveedor{
 	//Implementar mas atributos si hace falta
 	private String nombre_proveedor;
 	private int deuda_proveedor;

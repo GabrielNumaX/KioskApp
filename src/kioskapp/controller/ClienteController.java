@@ -28,27 +28,42 @@ public class ClienteController implements Initializable{
 	@FXML 
 	private TextArea Txtarea;
 	
-	
+	//Aca van los botones
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		BtnGuardar.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent arg0) {
-				String nombre = TxtNombre.getText();
-				String apellido = TxtApellido.getText();
-				String telefono = TxtTelefono.getText();
-				String numero_cuenta = TxtNumeroCuenta.getText();
-				
-				crearCliente(nombre,apellido,telefono,numero_cuenta);
+				crearCliente();
 			}
 		});
 	}
 
-	public void crearCliente(String nombre, String apellido, String telefono, String numero_cuenta) {
-		Cliente cliente = new Cliente(nombre,apellido,telefono,numero_cuenta);
+	public void crearCliente(){
+		String nombre = TxtNombre.getText();
+		String apellido = TxtApellido.getText();
+		String telefono = TxtTelefono.getText();
+		String numero_cuenta = TxtNumeroCuenta.getText();
+		Cliente cliente = new Cliente(nombre, apellido, telefono, numero_cuenta);
+		try {
+			cliente.guardarCliente(cliente);			
+		}catch(Exception e) {
+			System.out.println("El error es: "+e);
+		}
+		
+		//Esto de aca abajo es para ver si anda nada mas!
 		Txtarea.appendText(cliente.getNombre() + '\n');
 		Txtarea.appendText(cliente.getApellido() + '\n');
 		Txtarea.appendText(cliente.getTelefono() + '\n');
 		Txtarea.appendText(cliente.getNumeroCuenta() + '\n');
+	}
+	public void mostrarClientes(){
+		
+	}
+	public void borrarCliente(){
+		
+	}
+	public void editarCliente(int id){
+		
 	}
 	
 
