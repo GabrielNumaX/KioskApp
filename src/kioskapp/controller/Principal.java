@@ -13,7 +13,7 @@ public class Principal extends Application {
 	@Override
 	public void start(Stage stage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("kioskapp/view/Principal.fxml"));
+			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("kioskapp/view/Cliente.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			
