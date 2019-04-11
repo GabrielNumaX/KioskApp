@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="cuenta_corriente")
-public class CuentaCorriete {
+public class CuentaCorriente {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -29,7 +29,8 @@ public class CuentaCorriete {
 	private Date fecha_cierre;
 	
 	@Column
-	private int saldo;
+	//se cambio a float
+	private float saldo;
 	
 	@OneToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="numero_cuenta")
@@ -47,10 +48,10 @@ public class CuentaCorriete {
 	public void setFechaCierre(Date fecha_cierre){
 		this.fecha_cierre = fecha_cierre;
 	}
-	public int getSaldo(){
+	public float getSaldo(){
 		return saldo;
 	}
-	public void setSaldo(int saldo){
+	public void setSaldo(float saldo){
 		this.saldo = saldo;
 	}
 

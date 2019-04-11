@@ -3,7 +3,7 @@
   <groupId>KioskApp</groupId>
   <artifactId>KioskApp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>KiosKApp</name>
+  <name>KioskApp</name>
   <dependencies>
   	<dependency>
 	    <groupId>org.hibernate</groupId>

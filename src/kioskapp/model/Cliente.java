@@ -22,7 +22,9 @@ public class Cliente {
 	@Column
 	private String numero_cuenta;
 	@Column
-	private int deuda;
+	//se cambio int a float COMO SE USA REFACTOR?
+	private float saldo_cliente;
+	
 	private ConexionBDD conexion;
 	
 	public Cliente(String nombre, String apellido, String telefono, String numero_cuenta){
@@ -58,11 +60,11 @@ public class Cliente {
 	public void setNumeroCuenta(String numero_cuenta){
 		this.numero_cuenta = numero_cuenta;
 	}
-	public int getDeuda(){
-		return deuda;
+	public float getSaldoCliente(){
+		return saldo_cliente;
 	}
-	public void setDeuda(int deuda){
-		this.deuda = deuda;
+	public void setSaldoCliente(float saldo_cliente){
+		this.saldo_cliente=saldo_cliente;
 	}
 	
 	//Crud Cliente
