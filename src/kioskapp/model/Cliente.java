@@ -1,5 +1,8 @@
 package kioskapp.model;
 
+import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,6 +29,8 @@ public class Cliente {
 	private float saldo_cliente;
 	
 	private ConexionBDD conexion;
+	
+	public Cliente(){}
 	
 	public Cliente(String nombre, String apellido, String telefono, String numero_cuenta){
 		this.nombre = nombre;
@@ -68,16 +73,33 @@ public class Cliente {
 	}
 	
 	//Crud Cliente
-	public void guardarCliente(Cliente cliente) {
-		conexion.openCurrentSession();
+	public void guardarCliente(Cliente cliente){
+		conexion.openCurrentSessionwithTransaction();
 		conexion.getCurrentSession().save(cliente);
-		conexion.closeCurrentSessionwithTransaction();
-		
+		conexion.closeCurrentSessionwithTransaction();	
 	}
-	
-	
-	//Hasta aca
-	
+	public void borrarCliente(Cliente cliente){
+		conexion.openCurrentSessionwithTransaction();
+		conexion.getCurrentSession().delete(cliente);
+		conexion.closeCurrentSessionwithTransaction();
+	}
+	@SuppressWarnings("unchecked")
+	public List<Cliente> buscarTodos(){
+		conexion.openCurrentSession();
+		List<Cliente> lista_clientes = conexion.getCurrentSession().createQuery("SELECT * FROM cliente").list();
+		return lista_clientes;
+	}
+	public void actualizarCliente(Cliente cliente){
+		conexion.openCurrentSessionwithTransaction();
+		conexion.getCurrentSession().update(cliente);
+		conexion.closeCurrentSessionwithTransaction();
+	}
+	public Cliente buscarId(Serializable id){
+		conexion.openCurrentSessionwithTransaction();
+		Cliente cliente = conexion.getCurrentSession().get(Cliente.class, id);
+		conexion.closeCurrentSessionwithTransaction();
+		return cliente;
+	}
 	
 	
 }

@@ -44,10 +44,9 @@ public class ConexionBDD {
 	
 	private static SessionFactory getSessionFactory(){
 		Configuration configuration = new Configuration();
-		configuration.configure("kioskapp/view/hibernate.cfg.xml");
+		configuration.configure("kioskapp/hibernate.cfg.xml");
 		registry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();;
 		sessionFactory = configuration.buildSessionFactory(registry);
-		System.out.println(sessionFactory);
 		return sessionFactory;
 		
 	}
