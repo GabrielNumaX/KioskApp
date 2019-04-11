@@ -1,0 +1,27 @@
+Comentarios que no tengan que ver con delimitaciones en el codigo o con como
+ordenar ciertas cosas vamos a ponerlos aca porque sino es un bardo!:
+
+Cambios de variables: 
+deuda(int) -> saldo(float) en cliente
+deuda(int) -> saldo(float) en proveedores
+
+Otros problemas:
+Conexion con Hibernate.
+Prueba de conexion a la bdd de datos.
+
+En ConexionBDD hay warnings pero dejalos porque son de cosas que importe que
+por ahora no las estoy usando!
+
+
+Aclaraciones:
+En el archivo de hibernate esta el nombre de la bdd y el puerto y las claves y todo
+create una bdd con esto:
+
+CREATE TABLE cliente(
+	id INT PRIMARY KEY,
+	nombre VARCHAR(25),
+	apellido VARCHAR(25),
+	telefono VARCHAR(15),
+	numero_cuenta VARCHAR(10),
+	saldo_cliente VARCHAR(10) -> varchar para que sea mas facil almacenar
+);

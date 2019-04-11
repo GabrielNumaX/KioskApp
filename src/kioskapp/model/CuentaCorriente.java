@@ -29,8 +29,8 @@ public class CuentaCorriente {
 	private Date fecha_cierre;
 	
 	@Column
-	//se cambio a float
 	private float saldo;
+	
 	
 	@OneToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="numero_cuenta")

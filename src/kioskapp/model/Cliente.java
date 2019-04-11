@@ -25,10 +25,9 @@ public class Cliente {
 	@Column
 	private String numero_cuenta;
 	@Column
-	//se cambio int a float COMO SE USA REFACTOR?
 	private float saldo_cliente;
-	
 	private ConexionBDD conexion;
+	
 	
 	public Cliente(){}
 	
