@@ -11,7 +11,7 @@ Prueba de conexion a la bdd de datos.
 
 En ConexionBDD hay warnings pero dejalos porque son de cosas que importe que
 por ahora no las estoy usando!
-
+--si las vi
 
 Aclaraciones:
 En el archivo de hibernate esta el nombre de la bdd y el puerto y las claves y todo
@@ -23,5 +23,26 @@ CREATE TABLE cliente(
 	apellido VARCHAR(25),
 	telefono VARCHAR(15),
 	numero_cuenta VARCHAR(10),
-	saldo_cliente VARCHAR(10) -> varchar para que sea mas facil almacenar
+	saldo_cliente VARCHAR(10) -> varchar para que sea mas facil almacenar 
 );
+----------------------------------------------------------------------------
+12.04
+
+el tema de esto: saldo_cliente VARCHAR(10) -> varchar para que sea mas facil almacenar 
+es que no se si se van a poder hacer operaciones matematicas en la bdd si lo guardamos asi, habria que verlo
+sino va a haber q hacer todo en la logica y se va complicar con las consultas sql.
+
+otro tema es la clase cuenta corriente, tendria que haber dos cuenta corriente una para cada uno o bien 
+que filtre por cliente o proveedor desde la vista de cuenta corriente, tambien haria falta un atributo que sea nombre
+y tipo (cliente o proveedor) pero hay que definir primero lo primero.
+
+    @Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+	
+puse eso tambien pero me parece que no va.
+
+Hice la clase Articulo con los getters y setters, mañana veo si hago algunos metodos para ingresar los valores.
+y las anotaciones de hibernate.
+------------------------------------------------------------------------------
+
