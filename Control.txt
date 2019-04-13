@@ -38,11 +38,18 @@ y tipo (cliente o proveedor) pero hay que definir primero lo primero.
 
     @Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int id; <-adonde pusiste esto, si lo pusiste en articulo
+	esta bien como esta puesto! jaja
 	
 puse eso tambien pero me parece que no va.
 
 Hice la clase Articulo con los getters y setters, mañana veo si hago algunos metodos para ingresar los valores.
-y las anotaciones de hibernate.
+y las anotaciones de hibernate. (Ya estan las anotaciones hechas!)
 ------------------------------------------------------------------------------
-
+13/04/19
+Cree un tipo numerado para llevar el tipo de las cuentas corrientes.
+lo del saldo tipo VARCHAR habria que verlo cuando se recuperen los datos de la BDD, 
+creo que no influye el tipo con el que este guardado en la BDD.
+HIBERNATE:
+hay que solucionar el tema de la conexion e ir probando como se recuperan y
+guardan los datos y de ahi podriamos ir viendo como ir arreglando todo lo demas!

@@ -21,20 +21,20 @@ public class CuentaCorriente {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	
 	@Temporal(TemporalType.DATE)
 	private Date fecha_apertura;
-	
 	@Temporal(TemporalType.DATE)
 	private Date fecha_cierre;
-	
 	@Column
 	private float saldo;
-	
-	
 	@OneToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="numero_cuenta")
 	private Cliente numero_cuenta;
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="nCuenta_proveedor")
+	private Proveedor cuenta_proveedor;
+	@Column
+	private TipoCuenta tipoCuenta;
 	
 	public Date getFechaApertura(){
 		return fecha_apertura;

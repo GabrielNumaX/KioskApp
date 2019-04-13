@@ -1,13 +1,24 @@
 package kioskapp.model;
 
-public class Articulo {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table
+public class Articulo {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_art;
-	
+	@Column
 	private String nombre_art;
-	
+	@Column
 	private String descrip_art;
-	
+	@Column
 	private float precio_art;
 
 	
