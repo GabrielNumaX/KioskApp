@@ -84,9 +84,9 @@ public class Cliente {
 	}
 	@SuppressWarnings("unchecked")
 	public List<Cliente> buscarTodos(){
-		conexion.openCurrentSession();
-		List<Cliente> lista_clientes = conexion.getCurrentSession().createQuery("SELECT * FROM cliente").list();
-		return lista_clientes;
+			conexion.openCurrentSession();
+			List<Cliente> lista_clientes = conexion.getCurrentSession().createQuery("SELECT * FROM cliente").list();
+			return lista_clientes;
 	}
 	public void actualizarCliente(Cliente cliente){
 		conexion.openCurrentSessionwithTransaction();
