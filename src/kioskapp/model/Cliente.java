@@ -26,6 +26,7 @@ public class Cliente {
 	private String numero_cuenta;
 	@Column
 	private float saldo_cliente;
+	
 	private ConexionBDD conexion;
 	
 	
@@ -39,6 +40,10 @@ public class Cliente {
 	}
 	public int getId(){
 		return id;
+	}
+	
+	public void setId(int id) {
+		this.id=id;
 	}
 	public String getNombre(){
 		return nombre;

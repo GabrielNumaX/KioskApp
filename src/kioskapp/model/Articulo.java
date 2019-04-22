@@ -54,6 +54,18 @@ public class Articulo {
 		this.precio_art = precio_art;
 	}
 	
+	public Articulo(int id_art, String nombre_art, String descrip_art, float precio_art) {
+		 //super;
+		this.id_art=id_art;
+		this.nombre_art=nombre_art;
+		this.descrip_art=descrip_art;
+		this.precio_art=precio_art;
+	}
+	
+	@Override
+	public String toString() {
+		return "Id: "+id_art+", Nombre: "+nombre_art+", Descrip: "+descrip_art+", Precio: "+precio_art;
+	}
 	
 
 }
