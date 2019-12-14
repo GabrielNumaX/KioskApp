@@ -1,7 +1,9 @@
-C:\Users\usuario\eclipse-workspace\KioskApp\src\kioskapp\model\Proveedor.java
-C:\Users\usuario\eclipse-workspace\KioskApp\src\application\Main.java
-C:\Users\usuario\eclipse-workspace\KioskApp\src\kioskapp\model\CuentaCorriete.java
-C:\Users\usuario\eclipse-workspace\KioskApp\src\kioskapp\model\Cliente.java
-C:\Users\usuario\eclipse-workspace\KioskApp\src\kioskapp\model\ConexionBDD.java
-C:\Users\usuario\eclipse-workspace\KioskApp\src\kioskapp\controller\Principal.java
-C:\Users\usuario\eclipse-workspace\KioskApp\src\kioskapp\controller\ClienteController.java
+C:\Users\NumaX\eclipse-workspace\KioskApp\src\kioskapp\model\ConexionBDD.java
+C:\Users\NumaX\eclipse-workspace\KioskApp\src\kioskapp\model\Cliente.java
+C:\Users\NumaX\eclipse-workspace\KioskApp\src\kioskapp\model\TipoCuenta.java
+C:\Users\NumaX\eclipse-workspace\KioskApp\src\kioskapp\model\Articulo.java
+C:\Users\NumaX\eclipse-workspace\KioskApp\src\application\Main.java
+C:\Users\NumaX\eclipse-workspace\KioskApp\src\kioskapp\controller\ClienteController.java
+C:\Users\NumaX\eclipse-workspace\KioskApp\src\kioskapp\model\CuentaCorriente.java
+C:\Users\NumaX\eclipse-workspace\KioskApp\src\kioskapp\controller\Principal.java
+C:\Users\NumaX\eclipse-workspace\KioskApp\src\kioskapp\model\Proveedor.java
